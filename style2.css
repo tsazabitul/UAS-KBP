@@ -1,0 +1,224 @@
+/* style2.css */
+
+/* Umum */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Kontainer Utama */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #ffffffcc;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartu */
+.card {
+    margin-top: 20px;
+    border: none;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #555;
+}
+
+/* Tombol */
+button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #6a4c93;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #543b73;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+    transition: 0.3s;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+    transition: 0.3s;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Timer */
+#timerDisplay {
+    font-size: 3em;
+    color: #6a4c93;
+    margin-top: 20px;
+}
+
+/* To-Do List */
+#taskInput {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#taskList li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Flexbox untuk tombol */
+.d-flex {
+    display: flex;
+    gap: 10px; /* Memberikan jarak antar tombol */
+}
+
+.d-flex button {
+    flex: 1; /* Tombol memiliki lebar yang sama */
+    text-align: center; /* Teks pada tombol berada di tengah */
+}
+
+/* Atur tombol dalam to-do list */
+.list-group-item button {
+    margin-left: 5px;
+}
+
+#spotify-button:hover {
+    transform: scale(1.05);
+    background: #1ed760;
+}
+
+#spotify-player iframe {
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #spotify-player {
+        width: 280px;
+        height: 350px;
+        bottom: 80px;
+    }
+    
+    #spotify-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+#stats-container {
+    z-index: 1000;
+}
+
+#stats-container .stat-item {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+#weekly-chart {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    #stats-container {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 300px;
+    }
+}
